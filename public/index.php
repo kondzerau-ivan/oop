@@ -10,6 +10,5 @@ require_once ROOT . '/vendor/autoload.php';
 $app = new \PHPFramework\Application();
 
 require_once CONFIG . '/routes.php';
-dump($app->router->getRoutes());
 
-echo call_user_func($app->router->getRoutes()['GET']['/']);
+$app->run();

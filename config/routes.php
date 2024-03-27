@@ -2,14 +2,12 @@
 
 /** @var \PHPFramework\Application $app */
 
-use App\Controllers\ContactController;
-
 $app->router->get('/', function () {
-  return 'Home page';
+  return view('main');
 });
 
 $app->router->get('/about', function () {
-  return 'About page';
+  return view('about');
 });
 
 $app->router->get('/contact', [\App\Controllers\ContactController::class, 'index']);
